@@ -46,7 +46,7 @@ class _ImageInputState extends State<ImageInput> {
       children: [
         Container(
           height: 100,
-          width: 150,
+          width: deviceWidth(context) * 0.3,
           decoration: BoxDecoration(
             border: Border.all(
               width: 1,
@@ -79,4 +79,6 @@ class _ImageInputState extends State<ImageInput> {
       ],
     );
   }
+
+  double deviceWidth(BuildContext context) => MediaQuery.of(context).size.width;
 }

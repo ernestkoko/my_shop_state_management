@@ -12,11 +12,13 @@ class DBHelper {
     }, version: 1);
   }
 
+  //inserting data into the database
   static Future<void> insert(String table, Map<String, Object> data) async {
     final db = await DBHelper.database();
     db.insert(table, data, conflictAlgorithm: sql.ConflictAlgorithm.replace);
   }
 
+  //get data from the database
   static Future<List<Map<String, dynamic>>> getData(String table) async {
     final db = await DBHelper.database();
     return db.query(table);

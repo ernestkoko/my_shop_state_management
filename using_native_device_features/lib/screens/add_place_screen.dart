@@ -3,7 +3,8 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:using_native_device_features/providers/great_places.dart';
-import 'package:using_native_device_features/widgets/image_input.dart';
+import '../widgets/image_input.dart';
+import '../widgets/location_input.dart';
 
 class AddPlaceScreen extends StatefulWidget {
   static const routeName = '/add_place';
@@ -26,7 +27,7 @@ class _AddPlaceScreenState extends State<AddPlaceScreen> {
       showDialog(
         context: context,
         child: AlertDialog(
-          title: Text('Error'),
+          title: Text('Alas!'),
           content: Text('Title or Image is empty!'),
         ),
       );
@@ -61,7 +62,11 @@ class _AddPlaceScreenState extends State<AddPlaceScreen> {
                   SizedBox(
                     height: 10,
                   ),
-                  ImageInput(_selectImage)
+                  ImageInput(_selectImage),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  LocationInput()
                 ],
               ),
             ),
