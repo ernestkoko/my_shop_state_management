@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:using_native_device_features/providers/great_places.dart';
+
 import '../widgets/image_input.dart';
 import '../widgets/location_input.dart';
 
@@ -34,6 +35,7 @@ class _AddPlaceScreenState extends State<AddPlaceScreen> {
       return;
     }
 
+    //add the place
     Provider.of<GreatPlaces>(context, listen: false)
         .addPlace(_titleController.text, _pickedImage);
     //navigate away
