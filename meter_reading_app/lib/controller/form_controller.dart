@@ -11,7 +11,7 @@ enum ErrorException { noException, onException }
 class FormController {
   //Google App Script web url
   static const String URL =
-      'https://script.google.com/macros/s/AKfycbz8ifksndE1HBQKphkdkEtxOvtu3kJMED_J0GSMfuDRdINIab0/exec';
+      'https://script.google.com/macros/s/xxx/exec';
 
   //success status message
   static const String STATUS_SUCCESS = 'SUCCESS';
